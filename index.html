@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#17273B" />
+  <meta name="description" content="CC LAB — 브랜드의 선택 이유를 콘텐츠로 만듭니다. 광고, 숏폼, 브랜딩 콘텐츠 기획 및 제작 포트폴리오." />
+  <title>CC LAB — Creative Contents Lab</title>
+  <style>
+    :root{--navy:#17273B;--deep:#101d2c;--ivory:#FAF7F1;--coral:#FF6B56;--ink:#243142;--muted:#6b7782;--line:#dcdedc;--gray:#f0f0ed;--white:#fff;--max:1260px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ivory);color:var(--ink);font-family:Pretendard,'Apple SD Gothic Neo','Malgun Gothic',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased}button,a{font:inherit}a{color:inherit;text-decoration:none}button{cursor:pointer}button:focus-visible,a:focus-visible{outline:3px solid var(--coral);outline-offset:4px}button:disabled{cursor:not-allowed}img{display:block;max-width:100%}::selection{background:#ff9b8b;color:#101d2c}.container{width:min(var(--max),calc(100% - 88px));margin:auto}
+    .site-header{height:86px;position:sticky;top:0;z-index:100;background:rgba(250,247,241,.96);backdrop-filter:blur(16px);border-bottom:1px solid rgba(23,39,59,.10)}.header-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;min-width:165px}.brand-image{width:48px;height:48px;object-fit:cover;border-radius:50%}.brand-name{font-size:18px;font-weight:850;letter-spacing:-.04em}.brand-sub{display:block;color:#74808c;font-size:8px;font-weight:700;letter-spacing:.18em;margin-top:3px}.nav{display:flex;gap:34px;align-items:center}.nav a{font-size:12px;font-weight:750;letter-spacing:.11em;transition:color .2s}.nav a:hover{color:var(--coral)}.header-cta,.solid-btn{background:var(--coral);border:1px solid var(--coral);color:#fff;padding:14px 20px;font-size:12px;font-weight:800;letter-spacing:.02em;display:inline-flex;align-items:center;justify-content:center;gap:13px;transition:transform .2s,background .2s}.header-cta:hover,.solid-btn:hover{background:#e85a47;transform:translateY(-2px)}.menu-toggle{display:none;background:transparent;border:0;font-size:28px;color:var(--navy);padding:4px}
+    .hero{background:var(--navy);color:var(--ivory);position:relative;overflow:hidden;min-height:620px}.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 30%,rgba(112,143,169,.21),transparent 44%),linear-gradient(110deg,rgba(0,0,0,.10),transparent)}.hero::after{content:"";position:absolute;width:380px;height:380px;border:1px solid rgba(255,255,255,.09);border-radius:50%;right:-210px;bottom:-170px}.hero-content{position:relative;padding:115px 0 120px;max-width:1060px}.eyebrow{font-size:11px;letter-spacing:.26em;font-weight:850;text-transform:uppercase}.eyebrow.accent{color:var(--coral)}.hero h1{font-family:Inter,Arial,sans-serif;max-width:1060px;font-size:clamp(50px,7.5vw,112px);line-height:1.07;letter-spacing:-.065em;margin:28px 0 25px;font-weight:750}.hero h1 em{font-style:normal;color:#ffa596}.hero-ko{font-size:clamp(17px,2.3vw,25px);font-weight:700;letter-spacing:-.025em;margin:0 0 18px}.hero-description{font-size:14px;color:#c6d0d9;max-width:590px;line-height:1.9;margin:0 0 37px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.ghost-btn{border:1px solid rgba(255,255,255,.42);color:#fff;background:transparent;padding:14px 20px;font-size:12px;font-weight:800;display:inline-flex;align-items:center;gap:18px}.ghost-btn:hover{background:rgba(255,255,255,.11)}
+    section{scroll-margin-top:90px}.section{padding:110px 0}.section-heading{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:35px}.section-title{font-size:clamp(33px,4.4vw,63px);letter-spacing:-.06em;font-weight:750;line-height:1.12;margin:14px 0 0}.section-lead{font-size:13px;line-height:1.9;color:var(--muted);max-width:390px}
+    .project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px 22px}.project-card{display:block;min-width:0;text-align:left;border:0;background:transparent;padding:0;color:inherit}.project-card:hover .placeholder{background:#dee2e3}.project-card:hover .placeholder-symbol{transform:scale(1.08)}.placeholder{aspect-ratio:16/10;background:#e9e8e3;border:1px solid #dbddd9;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;transition:background .25s}.placeholder::after{content:"";position:absolute;inset:16px;border:1px solid #d1d4d2;pointer-events:none}.placeholder-symbol{width:44px;height:44px;border:1px solid #a8b1b6;border-radius:50%;display:grid;place-items:center;color:#8b979b;font-size:21px;transition:transform .25s}.placeholder-label{position:absolute;bottom:28px;color:#8b9599;font-size:9px;letter-spacing:.19em;font-weight:850}.project-category{color:#8b7d74;font-size:10px;font-weight:850;letter-spacing:.12em;text-transform:uppercase;margin-top:18px}.project-title{font-size:19px;font-weight:750;letter-spacing:-.03em;margin:8px 0 6px}.project-summary{color:var(--muted);font-size:12px;line-height:1.65}.project-topline{display:flex;justify-content:space-between;align-items:baseline;gap:12px}.card-arrow{font-size:19px;color:#89949c}.project-card:hover .card-arrow{color:var(--coral)}
+    .work{background:#fff}.filters{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:34px}.filter{background:transparent;border:1px solid #d7dad9;padding:10px 15px;border-radius:2px;color:#596472;font-size:11px;font-weight:750;letter-spacing:.01em}.filter.active,.filter:hover{background:var(--navy);border-color:var(--navy);color:#fff}.work-count{font-size:11px;color:#87919a;margin:0 0 23px}.empty{padding:46px;text-align:center;color:var(--muted);border:1px dashed var(--line)}
+    .services{background:var(--ivory)}.service-list{border-top:1px solid #cdd2d4}.service-item{border-bottom:1px solid #cdd2d4;padding:30px 0;display:grid;grid-template-columns:55px 1fr 1.2fr 26px;align-items:center;gap:20px}.service-name{font-size:clamp(19px,2.2vw,28px);font-weight:750;letter-spacing:-.045em}.service-desc{font-size:12px;color:var(--muted);line-height:1.8}
+    .about{background:#eceeea}.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:start}.about-mark{background:var(--navy);aspect-ratio:1/1;display:grid;place-items:center;padding:20%;max-width:390px}.about-mark img{width:100%;border-radius:50%}.about-copy{font-size:clamp(21px,3vw,36px);line-height:1.54;letter-spacing:-.045em;font-weight:700;margin:20px 0}.about-details{color:#62707d;font-size:13px;line-height:2;max-width:600px}.about-tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:27px}.about-tags span{padding:8px 10px;border:1px solid #bfc7c9;font-size:10px;letter-spacing:.05em;color:#64707a;font-weight:650}
+    .contact{background:var(--navy);color:#fff}.contact .section-title{max-width:780px}.contact-intro{font-size:15px;line-height:1.9;color:#c9d3dc;max-width:570px;margin:22px 0 38px}.contact-options{display:grid;grid-template-columns:1fr 1fr;gap:18px}.contact-tile{border:1px solid rgba(255,255,255,.25);padding:28px;display:flex;justify-content:space-between;gap:20px;align-items:end;min-height:155px;transition:background .2s}.contact-tile:hover{background:rgba(255,255,255,.07)}.contact-tile strong{font-size:20px}.contact-tile p{font-size:12px;line-height:1.7;color:#bdc9d3;margin:9px 0 0}.contact-tile .arrow{color:#ff9582;font-size:28px}.social-link{display:inline-flex;gap:9px;align-items:center;border-bottom:1px solid #99a5b1;padding-bottom:7px;margin-top:27px;font-size:12px}.footer{background:var(--deep);padding:30px 0;color:#c1cad3}.footer-inner{display:flex;gap:24px;justify-content:space-between;align-items:center;flex-wrap:wrap}.footer .name{font-size:17px;font-weight:850;color:#fff;letter-spacing:.05em}.footer .fine{font-size:11px;color:#9ba8b3}.footer a:hover{color:#fff}
+    .modal-backdrop{position:fixed;inset:0;background:rgba(8,16,25,.75);z-index:200;display:none;align-items:center;justify-content:center;padding:24px}.modal-backdrop.open{display:flex}.modal{max-width:720px;width:100%;max-height:min(90vh,850px);overflow:auto;background:var(--ivory);padding:34px;position:relative;box-shadow:0 30px 90px rgba(0,0,0,.2)}.close-modal{position:absolute;top:17px;right:22px;border:0;background:transparent;color:var(--navy);font-size:30px}.modal .placeholder{margin-top:20px;aspect-ratio:16/9}.modal .modal-category{color:var(--coral);font-size:11px;letter-spacing:.13em;font-weight:800}.modal h3{font-size:30px;letter-spacing:-.04em;margin:12px 40px 10px 0}.modal p{font-size:13px;color:var(--muted);line-height:1.8}.project-long-description{white-space:pre-line;font-size:14px!important;line-height:2!important;color:var(--navy)!important;margin:0;padding:0}.project-detail-section{margin-top:34px;padding-top:23px;border-top:1px solid var(--line)}.project-detail-label{font-size:11px;letter-spacing:.14em;color:var(--coral);font-weight:800;margin-bottom:12px}
+    @media(max-width:920px){.container{width:min(var(--max),calc(100% - 44px))}.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.nav{gap:16px}.service-item{grid-template-columns:35px 1fr;gap:8px 16px}.service-desc{grid-column:2}.about-grid{gap:30px}}@media(max-width:680px){.site-header{height:72px}.container{width:calc(100% - 36px)}.brand-image{width:41px;height:41px}.header-cta{display:none}.menu-toggle{display:block}.nav{position:absolute;top:72px;left:0;right:0;display:none;background:var(--ivory);padding:23px 18px 28px;box-shadow:0 16px 20px rgba(0,0,0,.09);flex-direction:column;align-items:stretch;gap:0}.nav.open{display:flex}.nav a{padding:14px 5px;border-bottom:1px solid var(--line)}.hero{min-height:590px}.hero-content{padding:108px 0 115px}.hero h1{font-size:clamp(48px,13.2vw,75px);max-width:500px}.hero-description{font-size:13px}.section{padding:73px 0}.section-heading{align-items:start;flex-direction:column;gap:12px}.project-grid{gap:25px 13px}.project-title{font-size:15px}.project-summary{font-size:11px}.placeholder-label{font-size:7px;bottom:20px}.placeholder::after{inset:9px}.filters{flex-wrap:nowrap;overflow-x:auto;padding-bottom:10px;scrollbar-width:thin}.filter{white-space:nowrap}.about-grid{grid-template-columns:1fr}.about-mark{max-width:190px;padding:25px}.contact-options{grid-template-columns:1fr}.contact-tile{min-height:125px}.modal{padding:24px}.modal h3{font-size:24px}}@media(max-width:390px){.project-grid{grid-template-columns:1fr}.hero h1{font-size:47px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+
+    /* CC LAB easy content editor */
+    .edit-trigger{position:fixed;right:18px;bottom:18px;z-index:140;background:var(--coral);color:white;border:0;border-radius:99px;padding:13px 19px;font-size:13px;font-weight:800;box-shadow:0 8px 32px #17273b40}
+    .editor-cover{display:none;position:fixed;inset:0;z-index:300;background:#091827aa}.editor-cover.active{display:block}
+    .editor-panel{position:absolute;right:0;top:0;height:100%;width:min(560px,100vw);overflow-y:auto;background:var(--ivory);padding:28px;box-shadow:-12px 0 50px #0002}
+    .editor-head{display:flex;justify-content:space-between;gap:16px;align-items:center}.editor-head h2{margin:4px 0;font-size:24px}.editor-close{font-size:27px;border:0;background:transparent;color:var(--navy)}
+    .editor-note{font-size:12px;color:#526171;line-height:1.8;padding:12px;background:#e9edea;margin:14px 0 20px}
+    .editor-section-label{font-size:11px;font-weight:850;letter-spacing:.14em;margin:22px 0 10px}
+    .editor-projects{display:grid;gap:6px;max-height:260px;overflow:auto;margin-bottom:14px}
+    .editor-project{display:flex;justify-content:space-between;gap:10px;align-items:center;text-align:left;padding:11px;background:white;border:1px solid var(--line);color:var(--navy);font-size:12px}
+    .editor-project.active{border-color:var(--coral);background:#fff5f1}
+    .editor-fields{display:grid;gap:12px}.editor-fields label{display:grid;gap:6px;font-size:12px;font-weight:750}
+    .editor-fields input,.editor-fields select,.editor-fields textarea{width:100%;padding:12px;border:1px solid #c9d0d1;border-radius:2px;background:white;color:var(--navy);font:inherit;font-weight:450;min-width:0}
+    .editor-fields textarea{min-height:76px;resize:vertical}.editor-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+    .editor-btn{background:var(--navy);color:white;border:0;padding:12px 14px;font-size:12px;font-weight:750}.editor-btn.secondary{background:white;color:var(--navy);border:1px solid #c3cbd0}.editor-btn.danger{color:#9b342f}
+    .editor-status{font-size:12px;color:#576774;min-height:22px;margin-top:10px}.editor-preview{max-width:100%;width:100%;max-height:230px;object-fit:contain;background:#e8e8e4;margin-top:8px}
+    .editor-tip{color:#6b7782;font-size:11px;font-weight:400;line-height:1.6}
+    @media(max-width:680px){.edit-trigger{bottom:12px;right:12px;padding:11px 15px}.editor-panel{padding:20px}}
+
+    .editor-tabs{display:flex;gap:8px;margin:14px 0 10px}.editor-tab{flex:1;border:1px solid #c9d0d1;background:#fff;padding:12px 8px;font-weight:750;color:var(--navy);cursor:pointer}.editor-tab.active{background:var(--navy);color:#fff}
+    .editor-tab-content{display:none}.editor-tab-content.active{display:block}
+    .editor-files{display:grid;gap:8px;margin:10px 0}.editor-media-line{display:flex;gap:8px;align-items:center;padding:8px;border:1px solid #d2d9d9;background:#fff;font-size:12px}.editor-media-line span{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.editor-mini{border:1px solid #c7cdd1;background:white;color:var(--navy);padding:7px 10px;cursor:pointer}.editor-badges{font-size:11px;color:#536476;margin-top:8px}.editor-input-note{font-size:11px;color:#6b7782;line-height:1.7}
+    .editor-cta-fixed{position:sticky;bottom:-28px;background:var(--ivory);border-top:1px solid #d7d7d3;padding:13px 0 22px;margin-top:20px}
+    .editor-fields label{line-height:1.5}.editor-btn{cursor:pointer}.editor-project{cursor:pointer}
+    .gallery-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:25px 0 13px}.gallery-tab{font:inherit;font-size:12px;color:var(--navy);background:transparent;border:1px solid #b9c2c6;padding:10px 14px;cursor:pointer}.gallery-tab.active{background:var(--navy);color:#fff;border-color:var(--navy)}.gallery-group[hidden]{display:none!important}.gallery-group-label{font-size:11px;letter-spacing:.1em;font-weight:800;color:var(--coral);margin-top:14px}.gallery-empty{padding:25px 12px;background:#e9e8e3;color:var(--muted);font-size:12px}.editor-media-section-title{font-size:12px;font-weight:800;margin:12px 0 6px;color:var(--navy)}.editor-type-line{display:flex;gap:8px;align-items:center;margin:7px 0}.editor-type-line input{min-width:0;flex:1;padding:11px;border:1px solid #cbd0d0;background:#fff;font:inherit}.editor-type-line .editor-mini{flex:none}.editor-type-add{display:flex;gap:8px;margin:10px 0 18px}.editor-type-add input{min-width:0;flex:1;padding:12px;border:1px solid #cbd0d0;background:#fff;font:inherit}.editor-type-add button{width:auto!important;white-space:nowrap;padding:10px!important}@media(max-width:520px){.editor-type-add{flex-direction:column}.editor-type-add button{width:100%!important}}
+    .portfolio-gallery{display:grid;gap:12px;margin:22px 0}.portfolio-gallery .placeholder{aspect-ratio:16/9}.portfolio-gallery video{background:#111}
+    .editor-preview-list{display:grid;gap:8px}.editor-preview-list .placeholder{max-height:210px;aspect-ratio:16/9}
+    .edit-highlight{outline:2px dashed var(--coral)!important;outline-offset:3px}
+    .project-grid{align-items:start}
+    .project-card{--preview-height:clamp(212px,22vw,280px);font:inherit}
+    .project-card .placeholder{height:var(--preview-height);aspect-ratio:auto}
+    .project-card .placeholder:has(img,video),
+    .project-card:hover .placeholder:has(img,video),
+    .project-media-gallery .placeholder:has(img,video){display:block;background:transparent;border:0}
+    .project-card .placeholder:has(img,video)::after,
+    .project-media-gallery .placeholder:has(img,video)::after{content:none}
+    .project-card .placeholder img,.project-card .placeholder video{display:block;width:auto;max-width:100%;height:100%;object-fit:contain;object-position:left center;border-radius:4px}
+    .project-card .project-topline{align-items:center;margin-top:16px}
+    .project-card .project-category{color:#63574f;font-size:11px;margin:0}
+    .project-card .project-title{font-size:clamp(17px,1.9vw,22px);line-height:1.3;margin:6px 0}
+    .project-card .project-summary{color:#4e5c69;font-size:14px;line-height:1.75;text-wrap:pretty}
+    main,.modal{word-break:keep-all;overflow-wrap:break-word}
+    .modal p{font-size:15px;color:#4e5c69;line-height:1.8}
+    .modal .project-long-description{font-size:15px!important}
+    .project-media-gallery .placeholder:has(img,video){aspect-ratio:auto;margin-top:0;overflow:visible}
+    .project-media-gallery .placeholder img{display:block;width:auto;max-width:100%;height:auto;max-height:min(65vh,640px);border:1px solid var(--line);border-radius:4px}
+    .card-news-series{margin-top:20px}
+    .card-news-series+.card-news-series{margin-top:32px;padding-top:24px;border-top:1px solid var(--line)}
+    .card-news-series h4{margin:0 0 6px;color:var(--navy);font-size:16px}
+    .series-viewer{max-width:560px}
+    .series-stage{position:relative;margin-top:8px}
+    .series-controls{position:absolute;inset:0;pointer-events:none}
+    .series-controls button{position:absolute;top:min(50%,25vh);transform:translateY(-50%);display:grid;place-items:center;width:50px;height:50px;border:2px solid #fff;background:var(--coral);color:var(--deep);border-radius:50%;box-shadow:0 3px 12px #101d2c60;font-size:0;pointer-events:auto}
+    .series-controls button::after{content:"";width:10px;height:10px;border:solid currentColor;border-width:0 3px 3px 0;transform:translateX(-2px) rotate(-45deg)}
+    .series-controls button:first-child::after{transform:translateX(2px) rotate(135deg)}
+    .series-controls button[aria-disabled="false"]:hover{background:#ff9a89}
+    .series-controls button:focus-visible{outline:3px solid var(--navy);outline-offset:2px}
+    .series-controls button:first-child{left:8px}
+    .series-controls button:last-child{right:8px}
+    .series-controls button[aria-disabled="true"]{background:#e8e5df;color:#596472;box-shadow:none;cursor:default}
+    .series-position{font-size:13px;font-variant-numeric:tabular-nums;color:var(--navy)}
+    .project-media-gallery .series-page .placeholder img{width:100%;max-height:none}
+    .project-media-gallery .placeholder video{display:block;width:auto;max-width:100%;height:auto;max-height:min(65vh,640px);background:transparent;border-radius:4px}
+    @media(min-width:581px){
+      .portfolio-gallery:has(> .video-media ~ .video-media){
+        grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:18px
+      }
+      .portfolio-gallery > .placeholder:not(.video-media){grid-column:1/-1}
+    }
+    .editor-preview-list .placeholder img,.editor-preview-list .placeholder video{width:100%;height:100%;object-fit:contain}
+    @media(max-width:680px){.project-card{--preview-height:clamp(168px,38vw,212px)}}
+    @media(max-width:390px){.project-card{--preview-height:236px}}
+    /* Editorial layout */
+    :root{--rule:rgba(23,39,59,.18);--coral-ink:#a54033}
+    .site-header{height:76px}
+    .header-cta,.solid-btn,.ghost-btn{border-radius:100px;min-height:46px}
+    .header-cta,.solid-btn{color:var(--deep)}
+    .header-cta:hover,.solid-btn:hover{background:#ff8877}
+    .hero{min-height:0;background:linear-gradient(125deg,var(--deep),var(--navy) 74%)}
+    .hero::after{content:none}
+    .hero-content{--hero-bottom:clamp(65px,7vw,110px);max-width:var(--max);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,5vw,80px);align-items:center;padding:var(--hero-bottom) 0}
+    .hero h1{font-size:clamp(52px,6.25vw,100px);line-height:.99;margin:26px 0 28px}
+    .hero .eyebrow{text-transform:none}
+    .hero h1 em{font-family:Georgia,serif;font-weight:400;font-style:italic;color:#ff9a89;letter-spacing:-.07em}
+    .hero-ko{font-size:clamp(17px,1.7vw,24px);line-height:1.5;margin-bottom:10px}
+    .hero-description{margin-bottom:26px}
+    .hero-art{width:100%;max-width:510px;align-self:end;justify-self:end;margin:0 0 calc(-1 * var(--hero-bottom))}
+    .hero-art img{width:100%;height:auto}
+    .section{padding:clamp(66px,8vw,118px) 0}
+    .section-heading{margin-bottom:clamp(24px,4vw,46px)}
+    .section-title{font-size:clamp(40px,5.5vw,76px);line-height:1.02}
+    .section-lead{font-size:15px;line-height:1.75;color:#4e5c69}
+    .section:not(.contact) .eyebrow.accent{color:var(--coral-ink)}
+    .project-grid{column-gap:clamp(16px,3vw,40px);row-gap:clamp(26px,4vw,50px)}
+    .project-card{border-top:1px solid var(--rule);padding-top:15px}
+    .project-card .placeholder img,.project-card .placeholder video{border-radius:2px}
+    .card-media-pair{position:relative;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);align-items:end;gap:clamp(8px,1.1vw,16px)}
+    .card-media-pair .placeholder:nth-child(2){height:calc(var(--preview-height) * .8)}
+    .card-media-pair .placeholder img,.card-media-pair .placeholder video{object-position:left bottom}
+    .card-media-count{position:absolute;top:0;right:0;border:1px solid var(--rule);border-radius:100px;background:var(--ivory);padding:5px 9px;color:var(--navy);font-size:11px;font-weight:700;white-space:nowrap}
+    .project-card .card-arrow{width:30px;height:30px;display:grid;place-items:center;flex:none;border:1px solid var(--rule);border-radius:50%;font-size:15px;color:var(--navy);transition:color .2s,background .2s}
+    .project-card:hover .card-arrow,.project-card:focus-visible .card-arrow{background:var(--navy);color:var(--ivory)}
+    .work{background:#fffdf9;border-top:1px solid var(--rule)}
+    .filters{gap:8px;margin-bottom:22px}
+    .filter{border-radius:100px;font-size:12px;padding:11px 16px}
+    .work-count{font-size:12px;color:#596472;letter-spacing:.09em}
+    .services{background:#eee9e1}
+    .service-list{border-top:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+    .service-item{display:block;padding:clamp(18px,2.5vw,31px);border:1px solid var(--rule);background:var(--ivory)}
+    .service-name{display:flex;align-items:center;gap:10px;line-height:1.15;margin-bottom:14px}
+    .service-name svg{width:20px;height:20px;flex:none;color:var(--coral-ink)}
+    .service-desc{font-size:14px;color:#4e5c69}
+    .service-desc small{display:block;margin-top:8px;font-size:12px;color:#63574f}
+    .about{background:var(--ivory)}
+    .about-grid{grid-template-columns:minmax(0,4fr) minmax(0,6fr);gap:clamp(28px,6vw,82px);align-items:center}
+    .about-mark{position:relative;isolation:isolate;aspect-ratio:5/4;max-width:none;padding:0;background:radial-gradient(ellipse at 78% 8%,#31465d,var(--deep) 76%);overflow:hidden}
+    .about-mark::before{content:"";position:absolute;inset:18px;border:1px solid #faf7f144;z-index:-1}
+    .about-mark::after{content:"";position:absolute;bottom:18px;left:18px;width:36px;height:1px;background:var(--coral)}
+    .about-mark img{width:42%;max-width:168px}
+    .work .section-title,.services .section-title,.about .section-title,.contact .section-title{margin-top:0}
+    .about-copy{font-size:clamp(22px,3.1vw,42px);line-height:1.32;margin:20px 0}
+    .about-details{font-size:15px;line-height:1.85;color:#4e5c69;margin:0}
+    .about-tags{gap:8px 18px;border-top:1px solid var(--rule);padding-top:16px;margin-top:25px}
+    .about-tags span{padding:0;border:0;font-size:10px;color:#4e5c69}
+    .contact{background:linear-gradient(125deg,var(--deep),var(--navy))}
+    .contact .section-title{font-size:clamp(48px,7vw,99px)}
+    .contact-tile{position:relative;isolation:isolate;overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:16px;min-height:176px;background:linear-gradient(115deg,#ffffff05,#ffffff0e);border-radius:4px}
+    .contact-tile:hover{background:linear-gradient(115deg,#ffffff0a,#ffffff16);border-color:#ff958280}
+    .contact-tile .arrow{position:absolute;top:10px;right:17px;font-size:22px}
+    .contact-art{position:relative;width:clamp(72px,10vw,126px);aspect-ratio:1;display:grid;place-items:center;margin-right:6px;background:radial-gradient(circle,#ff958225,transparent 70%);pointer-events:none}
+    .contact-art::before,.contact-art::after{content:"";position:absolute}
+    .contact-art-film::before{width:74%;height:51%;border:1px solid #f6e9e3b3;border-radius:7px;transform:rotate(-12deg);box-shadow:7px 7px 0 #101d2c,-6px -6px 0 -1px #ff95824d;background:#263951}
+    .contact-art-film::after{width:0;height:0;border-top:10px solid transparent;border-bottom:10px solid transparent;border-left:16px solid #ff9582;transform:translateX(2px) rotate(-12deg)}
+    .contact-art-collab::before,.contact-art-collab::after{width:53%;aspect-ratio:1;border-radius:50%;transform:rotate(-32deg)}
+    .contact-art-collab::before{left:11%;top:17%;border:1px solid #f6e9e3b3;background:#92a5bd32}
+    .contact-art-collab::after{right:11%;bottom:17%;border:1px solid #ff9582;background:#ff958234}
+    .contact-links{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-top:27px}
+    .contact-links .social-link{margin-top:0}
+    .social-link svg{width:16px;height:16px;flex:none}
+    .modal{border-radius:6px}
+    @media(max-width:920px){.service-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:680px){
+      .site-header{height:72px}
+      .hero-content{--hero-bottom:0px;grid-template-columns:1fr;gap:24px;padding:55px 0 var(--hero-bottom)}
+      .hero h1{font-size:clamp(48px,11vw,72px)}
+      .hero-art{width:min(100%,410px);justify-self:center}
+      .project-card{padding-top:11px}
+      .project-card .project-category{font-size:10px;letter-spacing:.07em}
+      .about-grid{grid-template-columns:1fr;gap:24px}
+      .about-mark{aspect-ratio:2/1;order:1}
+      .about-mark img{width:29%;max-width:115px}
+    }
+    @media(max-width:460px){.service-list{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header class="site-header"><div class="container header-inner">
+    <a href="#home" class="brand" aria-label="CC LAB 홈"><img class="brand-image" src="data:image/webp;base64,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" alt="CC LAB 공식 로고"/><span><strong class="brand-name">CC LAB</strong><small class="brand-sub">CREATIVE CONTENTS LAB</small></span></a>
+    <nav class="nav" id="site-nav" aria-label="주요 메뉴"><a href="#home">HOME</a><a href="#work">WORK</a><a href="#services">SERVICES</a><a href="#about">ABOUT</a><a href="#contact">CONTACT</a></nav>
+    <a class="header-cta" href="mailto:cclab_@naver.com?subject=%5BCC%20LAB%5D%20%EC%BD%98%ED%85%90%EC%B8%A0%20%EC%A0%9C%EC%9E%91%20%EB%AC%B8%EC%9D%98">PROJECT INQUIRY <span aria-hidden="true">↗</span></a>
+    <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="메뉴 열기">☰</button>
+  </div></header>
+  <main>
+    <section id="home" class="hero"><div class="container hero-content"><div class="hero-copy"><div class="eyebrow accent">CC LAB / Creative Contents LAB</div><h1>Ideas into<br/><em>Stories.</em><br/>Stories into<br/>Content.</h1><p class="hero-ko">브랜드의 선택 이유를 콘텐츠로 만듭니다.</p><p class="hero-description">광고와 숏폼, 브랜딩부터 특별한 순간을 위한 영상까지.<br/>CC LAB은 아이디어를 설득력 있는 시각적 콘텐츠로 구현합니다.</p><div class="hero-actions"><a class="solid-btn" href="#work">EXPLORE WORK <span aria-hidden="true">↗</span></a><a class="ghost-btn" href="#contact">START A PROJECT <span aria-hidden="true">↗</span></a></div></div><figure class="hero-art"><img src="assets/studio-hero-portrait-brown.webp" width="1122" height="1402" alt="베이지 니트와 흰 셔츠 차림으로 CC LAB을 소개하는 전윤아" fetchpriority="high"/></figure></div></section>
+    <section class="section work" id="work"><div class="container"><div class="section-heading"><div><h2 class="section-title">Work<span style="color:var(--coral)">.</span></h2></div><p class="section-lead section-intro">광고, 브랜딩, 브랜드 콘텐츠부터 창작 영상까지</p></div><div class="filters" id="filters" role="group" aria-label="포트폴리오 카테고리"></div><p class="work-count" id="work-count" aria-live="polite"></p><div class="project-grid" id="work-grid"></div></div></section>
+    <section class="section services" id="services"><div class="container"><div class="section-heading"><div><h2 class="section-title">Services<span style="color:var(--coral)">.</span></h2></div><p class="section-lead">브랜드 메시지에서 개인의 특별한 이야기까지,<br/>목적에 맞는 콘텐츠를 기획하고 제작합니다.</p></div><div class="service-list" id="services-list"></div></div></section>
+    <section class="section about" id="about"><div class="container about-grid"><div class="about-mark"><img src="data:image/webp;base64,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" alt="CC LAB 로고"/></div><div><h2 class="section-title">About<span style="color:var(--coral)">.</span></h2><p class="about-copy">브랜드를 선택할 이유가<br/>분명히 드러나는 콘텐츠를 만듭니다.</p><p class="about-details">CC LAB은 영상, 브랜딩, 디지털 콘텐츠를 기획하고 제작합니다.<br/>브랜드마다 고유한 이야기와 매력을 찾아 영상과 디자인으로 풀어냅니다.</p><div class="about-tags"><span>CREATIVE STRATEGY</span><span>FILM & VIDEO</span><span>BRAND DESIGN</span><span>DIGITAL CONTENT</span></div></div></div></section>
+    <section class="section contact" id="contact"><div class="container"><h2 class="section-title">Contact<span style="color:var(--coral)">.</span></h2><p class="contact-intro">브랜드와 서비스의 이야기를 콘텐츠로 만들고 싶다면, CC LAB에 들려주세요.<br/>프로젝트 제작 문의와 새로운 협업 제안을 기다립니다.</p><div class="contact-options"><a class="contact-tile" href="mailto:cclab_@naver.com?subject=%5BCC%20LAB%5D%20%EC%BD%98%ED%85%90%EC%B8%A0%20%EC%A0%9C%EC%9E%91%20%EB%AC%B8%EC%9D%98"><span><strong>프로젝트 제작 문의</strong><p>광고 · 숏폼 · 브랜딩 콘텐츠 제작</p></span><span class="contact-art contact-art-film" aria-hidden="true"></span><span class="arrow" aria-hidden="true">↗</span></a><a class="contact-tile" href="mailto:cclab_@naver.com?subject=%5BCC%20LAB%5D%20%ED%98%91%EC%97%85%20%EC%A0%9C%EC%95%88"><span><strong>협업 제안하기</strong><p>브랜드 협업 · 공동 프로젝트 · 파트너십</p></span><span class="contact-art contact-art-collab" aria-hidden="true"></span><span class="arrow" aria-hidden="true">↗</span></a></div><div class="contact-links"><a class="social-link" href="https://www.instagram.com/creative_contents_lab/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.25"/><circle cx="17.5" cy="6.5" r="1.25" fill="currentColor" stroke="none"/></svg>INSTAGRAM / @creative_contents_lab ↗</a><a class="social-link" href="mailto:cclab_@naver.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>E-MAIL / cclab_@naver.com</a></div></div></section>
+  </main>
+  <footer class="footer"><div class="container footer-inner"><div class="name">CC LAB<span style="color:var(--coral)">.</span></div><div class="fine">© CC LAB. 2026</div></div></footer>
+  <div class="modal-backdrop" id="project-modal" role="presentation"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="close-modal" id="close-modal" aria-label="프로젝트 상세 닫기">×</button><div id="modal-content"></div></div></div>
+
+  <button class="edit-trigger" id="edit-trigger" type="button" hidden>✎ 콘텐츠 편집</button>
+  <div class="editor-cover" id="editor-cover" role="presentation"><aside class="editor-panel" role="dialog" aria-modal="true" aria-labelledby="editor-heading">
+    <div class="editor-head"><div><div class="eyebrow accent">CC LAB / CONTENT MANAGER</div><h2 id="editor-heading">콘텐츠 편집</h2></div><button class="editor-close" id="editor-close" aria-label="편집기 닫기">×</button></div>
+    <p class="editor-note">이 화면에서 <b>사이트 문구를 직접 바꾸고, 영상·사진을 원하는 만큼 추가·삭제</b>할 수 있습니다. 작업 후 <b>편집 가능한 HTML 저장</b>을 눌러야 수정 내용이 파일에 남습니다.</p>
+    <div class="editor-tabs"><button type="button" class="editor-tab active" data-editor-tab="projects">작업물 편집</button><button type="button" class="editor-tab" data-editor-tab="texts">사이트 글자 수정</button></div>
+    <div class="editor-tab-content active" id="editor-tab-projects">
+    <div class="editor-section-label">프로젝트 선택</div><div id="editor-projects" class="editor-projects"></div>
+    <button type="button" class="editor-btn secondary" id="editor-add">＋ 새 프로젝트 추가</button>
+    <div class="editor-section-label">선택한 프로젝트 편집</div>
+    <div class="editor-fields">
+      <label>프로젝트명<input id="edit-title" placeholder="프로젝트명" maxlength="130"/></label>
+      <label>카테고리<select id="edit-category"></select></label>
+      <label>짧은 소개 (상단 · 목록에도 표시)<textarea id="edit-description" placeholder="프로젝트를 한두 문장으로 소개해 주세요."></textarea></label>
+      <label>상세 설명 (영상·이미지 하단)<textarea id="edit-details" rows="7" placeholder="기획 의도, 제작 과정, 주요 표현 방식 등 상세한 내용을 자유롭게 작성하세요."></textarea><span class="editor-tip">줄바꿈을 포함해 작성할 수 있습니다. 상세보기에서 미디어 아래에 표시됩니다.</span></label>
+      <div class="editor-section-label">작업물 유형 직접 관리</div>
+      <p class="editor-tip">프로젝트마다 유형을 자유롭게 추가하거나 이름을 바꿀 수 있습니다. 유형이 하나뿐이면 상세보기에서 탭을 숨깁니다.</p>
+      <div id="editor-type-manager" class="editor-files"></div>
+      <div class="editor-type-add"><input id="edit-new-type" type="text" maxlength="45" placeholder="예: 가맹 홍보 영상, 인터뷰, 촬영 사진" aria-label="새 작업물 유형 이름"/><button type="button" class="editor-btn secondary" id="edit-type-add">＋ 유형 추가</button></div>
+      <label>업로드할 작업물 유형<select id="edit-media-group"></select><span class="editor-tip">현재 선택된 유형에 영상 또는 이미지가 추가됩니다.</span></label>
+      <label>영상 또는 이미지 추가 (여러 개 선택 가능)<input id="edit-file" type="file" multiple accept="image/png,image/jpeg,image/webp,image/gif,video/mp4,video/webm"/><span class="editor-tip">MP4 · WEBM · JPG · PNG · WEBP · GIF. 한 번에 여러 파일을 선택할 수 있습니다. 등록 후 아래 목록에서 개별 삭제 가능합니다.</span></label>
+      <label>또는 미디어 직접 주소(URL)<input id="edit-url" type="url" placeholder="https://.../video.mp4 또는 image.jpg"/><span class="editor-tip">이미지/영상 파일의 직접 링크만 지원합니다. 일반 유튜브 페이지 주소는 사용할 수 없습니다.</span></label>
+      <div class="editor-section-label">등록된 작업물</div><div id="editor-media-list" class="editor-files"></div><div id="editor-preview-slot" class="editor-preview-list"></div>
+    </div>
+    <div class="editor-actions"><button class="editor-btn" type="button" id="editor-save">변경 적용</button><button class="editor-btn secondary danger" type="button" id="editor-delete">프로젝트 삭제</button></div>
+</div><div class="editor-tab-content" id="editor-tab-texts"><div class="editor-section-label">페이지 문구 수정</div><p class="editor-input-note">아래 입력칸을 고치고 '사이트 문구 적용'을 누르면 웹사이트 화면에 즉시 반영됩니다.</p><div id="editor-text-fields" class="editor-fields"></div><div class="editor-actions"><button type="button" class="editor-btn" id="editor-text-apply">사이트 문구 적용</button></div></div>
+    <div class="editor-section-label">결과물 저장</div>
+    <p class="editor-tip">현재 브라우저에서 수정한 내용은 이 화면에 적용됩니다. <b>작업 내용을 안전하게 보관하거나 다른 사람에게 보여주려면 반드시 아래 버튼으로 HTML을 다운로드</b>하세요. 웹사이트에 공개하려면 다운로드한 파일을 기존 호스팅에 다시 업로드해야 합니다.</p>
+<div class="editor-cta-fixed"><button class="editor-btn" type="button" id="editor-export">↓ 편집 가능한 HTML 저장하기</button><div class="editor-input-note">이 파일을 다음에 다시 열어 이어서 편집하세요. 영상이 많으면 파일 크기가 커집니다. 공개할 때는 편집 버튼을 제거한 보기 전용 HTML을 사용하세요.</div><button class="editor-btn secondary" type="button" id="editor-publish-export">↓ 보기 전용 HTML 저장하기</button></div>
+    <div class="editor-status" id="editor-status" role="status"></div>
+  </aside></div>
+  <script id="cclab-project-data" type="application/json">[{"title":"키카보니 생강진액 광고","category":"commercial","description":"생강진액의 특징을 장면으로 풀어낸 광고 영상","details":"제품의 핵심 특징을 짧은 영상 안에 전달하도록 구성한 키카보니 생강진액 광고 프로젝트입니다.\n제품을 중심으로 시선이 이어지는 장면 구성과 영상 표현 방식을 적용했습니다.","mediaTypes":[{"id":"group0","name":"전체 작업물"}],"mediaGroups":{"group0":["assets/kikaboni_ginger.mp4"]}},{"title":"SBKICKS 커스텀 스니커즈","category":"commercial","description":"스니커즈 디자인과 브랜드 메시지를 각각 담은 숏폼 두 편","details":"한 편은 제품 디자인을 선보이는 Product Showcase,\n다른 한 편은 SNS 메시지 중심의 Social Media Campaign 형식으로 제작했습니다.\n두 영상은 같은 브랜드를 서로 다른 콘텐츠 접근 방식으로 소개합니다.","mediaTypes":[{"id":"group0","name":"Product Showcase"},{"id":"group1","name":"Social Media Campaign"}],"mediaGroups":{"group0":["assets/sbkicks_showcase.mp4"],"group1":["assets/sbkicks_social.mp4"]}},{"title":"미래엔수학 교재 홍보","category":"commercial","description":"미래엔수학 교재를 소개하는 짧은 홍보 영상","details":"교재의 특징을 영상으로 소개하는 콘텐츠입니다.\n학부모와 교육 관계자에게 필요한 정보를 시각적으로 전달하는 데 초점을 맞췄습니다.","mediaTypes":[{"id":"group0","name":"전체 작업물"}],"mediaGroups":{"group0":["assets/miraen_book.mp4"]}},{"title":"OURLY 브랜드 아이덴티티","category":"identity","description":"헤어 액세서리 브랜드 OURLY의 로고 · 컬러 · 웹사이트 디자인","details":"OURLY의 아이덴티티를 로고와 색상 시스템으로 표현하고 웹사이트 디자인까지 확장했습니다.\n브랜드 컬러는 크림 아이보리(#F8F3EC), 베이지(#E2C9B8),\n모카 브라운(#B98B76), 다크 브라운(#4A3B35)을 적용했습니다.","mediaTypes":[{"id":"group0","name":"Brand Identity"},{"id":"group1","name":"Website Design"}],"mediaGroups":{"group0":["assets/ourly_logo_01.webp","assets/ourly_logo_02.webp","assets/ourly_brand_colors.webp"],"group1":["assets/ourly_website.webp"]}},{"title":"스마일택배 3PL 로고 디자인","category":"identity","description":"웃는 택배 상자에 배송의 속도감을 담은 물류 브랜드 로고와 컬러","details":"웃는 표정을 넣은 택배 상자로 스마일택배의 이름을 시각화했습니다.\n상자 뒤의 속도선과 앞으로 뻗는 화살표로 배송의 움직임을 표현했습니다.\n\n라이트 그레이(#F3F1ED)를 바탕으로 스마일 옐로우(#FDB43A)와 택배 오렌지(#F28C24)를 사용하고,\n딥 네이비(#142B57)로 로고와 글자의 대비를 잡았습니다.","mediaTypes":[{"id":"identity","name":"Brand Identity"}],"mediaGroups":{"identity":["assets/smile-3pl-logo.webp","assets/smile-3pl-colors.webp"]}},{"title":"미래엔수학 은평덕양지사","category":"campaigns","description":"가맹 홍보와 사업설명회 영상 · 포스터 · 교육 카드뉴스","details":"미래엔수학 은평덕양지사의 가맹 홍보와 사업설명회 안내를 위한 영상과 포스터를 제작했습니다.\n카드뉴스는 학부모 상담, 학교 AI 교육, 학원 창업과 브랜드 전환을 주제별로 구성했습니다.","mediaTypes":[{"id":"group0","name":"가맹 홍보 영상"},{"id":"group1","name":"사업설명회 홍보 영상"},{"id":"parent-consultation","name":"시리즈 1 · 학부모 상담","layout":"pages"},{"id":"ai-education","name":"시리즈 2 · 학교 AI 교육","layout":"pages"},{"id":"franchise-card-news","name":"시리즈 3 · 학원 창업과 브랜드 전환","layout":"pages"},{"id":"event-poster","name":"사업설명회 홍보 포스터"}],"mediaGroups":{"group0":["assets/miraen_franchise.mp4"],"group1":["assets/miraen_event_01.mp4","assets/miraen_event_02.mp4","assets/miraen_event_03.mp4","assets/miraen_event_04.mp4","assets/miraen_event_05.mp4"],"parent-consultation":["assets/miraen-parent-consultation-1.webp","assets/miraen-parent-consultation-2.webp","assets/miraen-parent-consultation-3.webp","assets/miraen-parent-consultation-4.webp","assets/miraen-parent-consultation-5.webp","assets/miraen-parent-consultation-6.webp","assets/miraen-parent-consultation-7.webp"],"ai-education":["assets/miraen-ai-education-1.webp","assets/miraen-ai-education-2.webp","assets/miraen-ai-education-3.webp","assets/miraen-ai-education-4.webp","assets/miraen-ai-education-5.webp","assets/miraen-ai-education-6.webp"],"franchise-card-news":["assets/miraen-franchise-card-1.webp","assets/miraen-franchise-card-2.webp","assets/miraen-franchise-card-3.webp","assets/miraen-franchise-card-4.webp","assets/miraen-franchise-card-5.webp","assets/miraen-franchise-card-6.webp","assets/miraen-franchise-card-7.webp"],"event-poster":["assets/miraen-event-poster.webp","assets/miraen-event-poster-2.webp"]}},{"title":"미래엔수학 화수베스트학원","category":"campaigns","description":"화수베스트학원 홍보 영상과 수학 학습 정보를 담은 카드뉴스","details":"미래엔수학 화수베스트학원을 소개하는 세로형 홍보 영상 두 편을 제작했습니다.\n\n학부모와 학생이 수학 학습 정보를 한 장씩 읽을 수 있도록 세 편의 카드뉴스를 구성했습니다.\n\n기초학력진단 편은 수학 진단의 변화와 맞춤 학습 과정을,\n수학탐구 편은 과학·수학 한마당의 체험과 전시를 소개합니다.\n고1 모의고사 편은 오답률이 높은 문항 세 개와 핵심 개념을 정리했습니다.","mediaTypes":[{"id":"assessment","name":"시리즈 1 · 기초학력진단","layout":"pages"},{"id":"math-exploration","name":"시리즈 2 · 수학탐구","layout":"pages"},{"id":"mock-exam","name":"시리즈 3 · 고1 모의고사","layout":"pages"},{"id":"hwasu-promo","name":"홍보 영상"}],"mediaGroups":{"assessment":["assets/hwasu-assessment-1.webp","assets/hwasu-assessment-2.webp","assets/hwasu-assessment-3.webp","assets/hwasu-assessment-4.webp","assets/hwasu-assessment-5.webp","assets/hwasu-assessment-6.webp","assets/hwasu-assessment-7.webp"],"math-exploration":["assets/hwasu-math-exploration-1.webp","assets/hwasu-math-exploration-2.webp","assets/hwasu-math-exploration-3.webp","assets/hwasu-math-exploration-4.webp","assets/hwasu-math-exploration-5.webp","assets/hwasu-math-exploration-6.webp","assets/hwasu-math-exploration-7.webp"],"mock-exam":["assets/hwasu-mock-exam-1.webp","assets/hwasu-mock-exam-2.webp","assets/hwasu-mock-exam-3.webp","assets/hwasu-mock-exam-4.webp"],"hwasu-promo":["assets/hwasu-promo-1.mp4","assets/hwasu-promo-2.mp4"]}},{"title":"삭제하시겠습니까?","category":"original","description":"경력 공백에 대한 시선을 돌아보는 AI 단편영화 · W-ink 영화제 장려상 수상작","details":"《삭제하시겠습니까?》는 육아와 돌봄으로 직장을 떠난 여성의 시간이 단순한 공백이 아니라\n경험과 역량이 쌓인 시간일 수 있다는 메시지를 담은 작품입니다.\n2026 W-ink 영화제 장려상을 수상했습니다.","mediaTypes":[{"id":"group0","name":"전체 작업물"}],"mediaGroups":{"group0":["assets/delete_this_film.mp4"]}},{"title":"AI 그림책 홍보 영상","category":"original","description":"그림책 《왜 나만 안 터지지?》의 이야기와 캐릭터를 담은 홍보 영상","details":"그림책 속 캐릭터와 이야기를 짧은 영상 형태로 보여주는 홍보 프로젝트입니다.\n정적인 그림책의 분위기를 영상 매체로 전달하도록 구성했습니다.","mediaTypes":[{"id":"group0","name":"전체 작업물"}],"mediaGroups":{"group0":["assets/toki_book_promo.mp4"]}},{"title":"기념일 애니메이션 영상","category":"personal","description":"두 사람의 추억을 담은 맞춤형 기념일 애니메이션","details":"개인적인 추억과 감정을 한 편의 애니메이션으로 구성한 기념일 영상 프로젝트입니다.\n특별한 순간을 영상으로 간직할 수 있도록 이야기 흐름을 중심으로 제작했습니다.","mediaTypes":[{"id":"group0","name":"전체 작업물"}],"mediaGroups":{"group0":["assets/anniversary_film.mp4"]}},{"title":"AI 고양이 숏폼","category":"personal","description":"AI를 활용해 고양이의 일상을 짧은 이야기로 풀어낸 영상 시리즈","details":"고양이가 카메라 앞에 서고, 마이크를 쥔다면?\n사람에게 익숙한 상황을 고양이에게 맡겨 엉뚱한 웃음을 만드는 AI 숏폼 시리즈입니다.\n\n진지한 고양이 표정과 뜻밖의 행동이 어우러지는 순간을 중심으로,\n각 영상에 하나씩 짧은 개그를 담았습니다.","mediaTypes":[{"id":"general","name":"전체 작업물"}],"mediaGroups":{"general":["assets/dambi-world.mp4","assets/ai-cat-short-4.mp4","assets/dambi.mp4","assets/dambi-raincoat.mp4","assets/ai-cat-short-5.mp4"]}},{"title":"식당 소개 영상","category":"spaces","description":"옛골들채의 공간과 메뉴를 소개하는 식당 홍보 릴스","details":"식당 옛골들채를 소개하기 위해 제작한 세로형 숏폼 영상입니다.\n음식과 공간의 시각적인 특징을 짧은 호흡으로 보여주는 로컬 콘텐츠입니다.","mediaTypes":[{"id":"group0","name":"전체 작업물"}],"mediaGroups":{"group0":["assets/yetgol_restaurant.mp4"]}}]</script>
+  <script id="cclab-text-data" type="application/json">null</script>
+  <script>
+    const CATEGORIES = [
+      {id:'commercial',name:'Commercial Films',ko:'광고 · 브랜드 필름',desc:'제품과 브랜드의 매력을 영상으로 표현'},
+      {id:'identity',name:'Branding',ko:'브랜드 아이덴티티 · 웹 디자인',desc:'브랜드의 정체성을 디자인하고 디지털 경험으로 확장'},
+      {id:'campaigns',name:'Brand Content',ko:'브랜드 콘텐츠 · SNS 콘텐츠',desc:'브랜드의 메시지를 다양한 콘텐츠로 구현'},
+      {id:'original',name:'Creative Films',ko:'오리지널 필름 · 창작 영상',desc:'독창적인 시선과 스토리텔링으로 완성하는 창작 영상'},
+      {id:'personal',name:'Personal Stories',ko:'기념일 · 맞춤형 영상',desc:'소중한 순간과 추억을 특별한 영상으로 기록'},
+      {id:'spaces',name:'Spaces & Places',ko:'공간 · 로컬 콘텐츠',desc:'공간의 분위기와 고유한 매력을 영상으로 전달'}
+    ];
+    // 추후 포트폴리오 추가: 아래 배열에 {title,category,description,media} 객체를 추가하세요.
+    // media: 'assets/파일명.jpg' 또는 'assets/파일명.mp4'를 지정하면 카드와 상세보기에 반영됩니다.
+    const INITIAL_PROJECTS = [
+      {title:'키카보니 생강진액 광고',category:'commercial',description:'제품의 특징과 매력을 담은 광고 영상',media:''},
+      {title:'SBKICKS 커스텀 스니커즈',category:'commercial',description:'커스텀 스니커즈 브랜드 홍보 영상',media:''},
+      {title:'미래엔수학 교재 홍보',category:'commercial',description:'교육 교재의 특성을 소개하는 홍보 영상',media:''},
+      {title:'OURLY 브랜드 아이덴티티',category:'identity',description:'로고와 웹사이트를 포함한 브랜드 디자인 프로젝트',media:''},
+      {title:'미래엔수학 은평덕양지사',category:'campaigns',description:'가맹 홍보 영상 · 카드뉴스 · SNS 콘텐츠',media:''},
+      {title:'미래엔수학 화수베스트학원',category:'campaigns',description:'학원 홍보 영상 · 카드뉴스 · 디지털 콘텐츠',media:''},
+      {title:'삭제하시겠습니까?',category:'original',description:'W-ink 영화제 장려상 수상작',media:''},
+      {title:'AI 그림책 홍보 영상',category:'original',description:'그림책 세계관을 영상으로 표현한 콘텐츠',media:''},
+      {title:'기념일 애니메이션 영상',category:'personal',description:'두 사람의 특별한 이야기를 담은 기념일 영상',media:''},
+      {title:'AI 고양이 숏폼',category:'personal',description:'AI를 활용해 고양이의 일상을 짧은 이야기로 풀어낸 영상 시리즈',media:''},
+      {title:'식당 소개 영상',category:'spaces',description:'식당의 분위기와 매력을 소개하는 영상',media:''},
+    ];
+    const embeddedEl=document.getElementById('cclab-project-data');
+    let loaded=null;
+    try{loaded=JSON.parse(embeddedEl.textContent)}catch(e){}
+    let PROJECTS=Array.isArray(loaded)?loaded:INITIAL_PROJECTS.map(p=>({...p}));
+    const byId = id=>document.getElementById(id);
+    const escapeHTML = v=>String(v).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+    // Editable per-project media types. Earlier fixed video/cards/ads groups remain editable.
+    const LEGACY_TYPES=[{id:'video',name:'홍보 영상'},{id:'cards',name:'카드뉴스'},{id:'ads',name:'광고 소재'}];
+    const DEFAULT_TYPE={id:'general',name:'전체 작업물'};
+    function mediaTypes(p){
+      if(Array.isArray(p.mediaTypes)&&p.mediaTypes.length)return p.mediaTypes.filter(t=>t&&typeof t.id==='string'&&typeof t.name==='string');
+      if(p.mediaGroups&&Object.keys(p.mediaGroups).some(k=>['video','cards','ads'].includes(k)))return LEGACY_TYPES.map(t=>({...t}));
+      return [{...DEFAULT_TYPE}];
+    }
+    function groupedMedia(p){
+      const stored=p.mediaGroups&&typeof p.mediaGroups==='object'?p.mediaGroups:{};
+      const output={};
+      for(const type of mediaTypes(p))output[type.id]=Array.isArray(stored[type.id])?[...stored[type.id]]:[];
+      const legacy=Array.isArray(p.mediaList)?p.mediaList:(p.media?[p.media]:[]);
+      if(legacy.length && !Object.values(output).some(arr=>arr.length))output[mediaTypes(p)[0].id].push(...legacy);
+      return output;
+    }
+    function normalizedMedia(p){const groups=groupedMedia(p);return mediaTypes(p).flatMap(g=>groups[g.id]||[])}
+    function saveGroups(p,groups){p.mediaGroups=groups;delete p.mediaList;delete p.media}
+    function saveTypes(p,types,groups){p.mediaTypes=types;saveGroups(p,groups)}
+    function oneMedia(media,title,detail=false){
+      if (/^(?:assets\/[a-zA-Z0-9._/-]+\.(jpe?g|png|webp|gif)|data:image\/(?:jpeg|png|webp|gif);base64,[a-zA-Z0-9+/=]+|https?:\/\/[^\s\"'<>]+\.(?:jpe?g|png|webp|gif)(?:\?[^\s\"'<>]*)?)$/i.test(media)) return `<div class="placeholder"><img src="${escapeHTML(media)}" alt="${escapeHTML(title)}" loading="lazy"/></div>`;
+      if (/^(?:assets\/[a-zA-Z0-9._/-]+\.(mp4|webm)|data:video\/(?:mp4|webm);base64,[a-zA-Z0-9+/=]+|https?:\/\/[^\s\"'<>]+\.(?:mp4|webm)(?:\?[^\s\"'<>]*)?)$/i.test(media)) return `<div class="placeholder video-media"><video src="${escapeHTML(media)}" ${detail?'controls':'muted'} playsinline preload="metadata"></video></div>`;
+      return '<div class="placeholder"><span class="placeholder-symbol" aria-hidden="true">＋</span><span class="placeholder-label">YOUR WORK / COMING SOON</span></div>';
+    }
+    const videoCovers = new Set([
+      'kikaboni_ginger', 'sbkicks_showcase', 'miraen_book',
+      'miraen_franchise', 'delete_this_film', 'toki_book_promo',
+      'anniversary_film', 'dambi-world', 'yetgol_restaurant',
+      'sbkicks_social', 'miraen_event_01', 'dambi', 'ai-cat-short-4',
+    ].map(name => `assets/${name}.mp4`));
+
+    function cardPreviews(media,title,workCount){
+      const previews = media.slice(0,2);
+      if (media[0] === 'assets/ourly_logo_01.webp' && media.includes('assets/ourly_brand_colors.webp')) {
+        previews[1] = 'assets/ourly_brand_colors.webp';
+      }
+      const markup = previews.map(cover => {
+        const preview = videoCovers.has(cover) ? cover.replace(/\.mp4$/, '-cover.jpg') : cover;
+        return oneMedia(preview,title);
+      }).join('');
+      if (media.length < 2) return markup || oneMedia('',title);
+      const count=workCount>1 ? `<span class="card-media-count">작업물 ${workCount}개</span>` : '';
+      return `<div class="card-media-pair" aria-hidden="true">${markup}${count}</div>`;
+    }
+
+    function seriesMarkup(pages,title){
+      return `<div class="series-viewer">
+        <span class="series-position" aria-live="polite">1 / ${pages.length}장</span>
+        <div class="series-stage">
+          ${pages.map((media,index)=>`<div class="series-page" ${index?'hidden':''}>${oneMedia(media,`${title} ${index+1}장`,true)}</div>`).join('')}
+          <div class="series-controls" aria-label="${escapeHTML(title)} 페이지 이동" role="group">
+            <button type="button" data-series-step="-1" aria-label="이전 장" aria-disabled="true"></button>
+            <button type="button" data-series-step="1" aria-label="다음 장" aria-disabled="${pages.length===1}"></button>
+          </div>
+        </div>
+      </div>`;
+    }
+
+    function mediaMarkup(item){
+      const groups=groupedMedia(item),available=mediaTypes(item).filter(g=>(groups[g.id]||[]).length);
+      if(!available.length)return oneMedia('',item.title,true);
+      const series=available.filter(type=>type.layout==='pages');
+      const sections=available.filter(type=>type.layout!=='pages').map(type=>({
+        id:type.id,
+        label:`${type.name} (${groups[type.id].length})`,
+        content:`<div class="gallery-group-label">${escapeHTML(type.name)}</div><div class="portfolio-gallery">${groups[type.id].map(m=>oneMedia(m,item.title,true)).join('')}</div>`,
+      }));
+      if(series.length){
+        sections.push({
+          id:'card-news-series',
+          label:`카드뉴스 (${series.length})`,
+          content:(sections.length?'':'<div class="gallery-group-label">카드뉴스</div>')+series.map(type=>`<section class="card-news-series"><h4>${escapeHTML(type.name)}</h4>${seriesMarkup(groups[type.id],type.name)}</section>`).join(''),
+        });
+      }
+      const tabs=sections.length>1?sections.map((section,i)=>`<button type="button" class="gallery-tab ${i===0?'active':''}" data-gallery-tab="${escapeHTML(section.id)}" aria-pressed="${i===0}">${escapeHTML(section.label)}</button>`).join(''):'';
+      const panes=sections.map((section,i)=>`<section class="gallery-group" data-gallery-group="${escapeHTML(section.id)}" ${i?'hidden':''}>${section.content}</section>`).join('');
+      return `<div class="project-media-gallery"><div class="gallery-tabs" role="group" aria-label="작업물 유형">${tabs}</div>${panes}</div>`;
+    }
+    function card(item,index){
+      const cat=CATEGORIES.find(c=>c.id===item.category);
+      const title=escapeHTML(item.title);
+      const groups=groupedMedia(item);
+      const media=mediaTypes(item).flatMap(type=>type.layout==='pages'?groups[type.id].slice(0,1):groups[type.id]);
+      const workCount=media.length;
+      const countLabel=workCount>1 ? `, 작업물 ${workCount}개` : '';
+      return `<button type="button" class="project-card" data-project="${index}" aria-label="${title} 상세 보기${countLabel}">${cardPreviews(media,item.title,workCount)}<div class="project-topline"><div class="project-category">${escapeHTML(cat.name)}</div><span class="card-arrow" aria-hidden="true">↗</span></div><h3 class="project-title">${title}</h3><div class="project-summary">${escapeHTML(item.description)}</div></button>`;
+    }
+    let indexes=PROJECTS.map((_,i)=>i);
+    function renderCards(target,selected){let rows=indexes.filter(i=>selected==='all'||PROJECTS[i].category===selected);byId(target).innerHTML=rows.map(i=>card(PROJECTS[i],i)).join('')||'<div class="empty">현재 등록된 작업물이 없습니다.</div>';return rows.length}
+    let selectedCategory='all';
+    function renderFilters(){byId('filters').innerHTML=[{id:'all',name:'ALL WORKS'},...CATEGORIES].map(c=>`<button class="filter ${selectedCategory===c.id?'active':''}" data-filter="${c.id}" aria-pressed="${selectedCategory===c.id}">${escapeHTML(c.name)}</button>`).join('');let count=renderCards('work-grid',selectedCategory);byId('work-count').textContent=`${String(count).padStart(2,'0')} PROJECTS`}
+    renderFilters();
+    byId('filters').addEventListener('click',e=>{let btn=e.target.closest('[data-filter]');if(!btn)return;selectedCategory=btn.dataset.filter;renderFilters()});
+    const serviceIcons={
+      commercial:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m10 9 5 3-5 3z"/>',
+      identity:'<path d="m12 3 9 9-9 9-9-9z"/><path d="m12 8 4 4-4 4-4-4z"/>',
+      campaigns:'<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18m-14 4h4m3 0h3m-10 3h10"/>',
+      original:'<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16m10-16v16M3 9h4m-4 6h4m10-6h4m-4 6h4"/>',
+      personal:'<path d="M12 20 4.7 13a4.6 4.6 0 0 1 6.5-6.5l.8.8.8-.8a4.6 4.6 0 0 1 6.5 6.5z"/>',
+      spaces:'<path d="M20 10c0 6-8 11-8 11s-8-5-8-11a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="2.5"/>',
+    };
+    byId('services-list').innerHTML=CATEGORIES.map(cat=>`<div class="service-item"><div class="service-name"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${serviceIcons[cat.id]}</svg>${escapeHTML(cat.name)}</div><div class="service-desc">${escapeHTML(cat.desc)}<small>${escapeHTML(cat.ko)}</small></div></div>`).join('');
+    let previousFocus=null;
+    function showProject(index){let item=PROJECTS[index];if(!item)return;let cat=CATEGORIES.find(c=>c.id===item.category);previousFocus=document.activeElement;byId('modal-content').innerHTML=`<div class="modal-category">${escapeHTML(cat.name)}</div><h3 id="modal-title">${escapeHTML(item.title)}</h3><p>${escapeHTML(item.description)}</p>${mediaMarkup(item)}<section class="project-detail-section" aria-label="프로젝트 상세 설명"><div class="project-detail-label">PROJECT OVERVIEW</div><p class="project-long-description">${item.details?.trim()?escapeHTML(item.details):'상세 설명을 추가할 수 있습니다. 콘텐츠 편집에서 ‘상세 설명’을 입력해 주세요.'}</p></section>`;byId('project-modal').classList.add('open');document.body.style.overflow='hidden';byId('close-modal').focus()}
+    document.addEventListener('click',e=>{const p=e.target.closest('[data-project]');if(p)showProject(Number(p.dataset.project))});
+    byId('modal-content').addEventListener('click',e=>{const btn=e.target.closest('[data-gallery-tab]');if(!btn)return;const id=btn.dataset.galleryTab;const gallery=btn.closest('.project-media-gallery');gallery.querySelectorAll('[data-gallery-tab]').forEach(b=>{b.classList.toggle('active',b.dataset.galleryTab===id);b.setAttribute('aria-pressed',String(b.dataset.galleryTab===id))});gallery.querySelectorAll('[data-gallery-group]').forEach(p=>p.hidden=p.dataset.galleryGroup!==id)});
+    byId('modal-content').addEventListener('click',event=>{
+      const button=event.target.closest('[data-series-step]');
+      if(!button||button.getAttribute('aria-disabled')==='true')return;
+      const viewer=button.closest('.series-viewer');
+      const pages=[...viewer.querySelectorAll('.series-page')];
+      const current=pages.findIndex(page=>!page.hidden);
+      const next=current+Number(button.dataset.seriesStep);
+      pages[current].hidden=true;
+      pages[next].hidden=false;
+      viewer.querySelector('.series-position').textContent=`${next+1} / ${pages.length}장`;
+      viewer.querySelector('[data-series-step="-1"]').setAttribute('aria-disabled',String(next===0));
+      viewer.querySelector('[data-series-step="1"]').setAttribute('aria-disabled',String(next===pages.length-1));
+    });
+    function closeModal(){byId('project-modal').classList.remove('open');document.body.style.overflow='';if(previousFocus)previousFocus.focus()}
+    byId('close-modal').addEventListener('click',closeModal);byId('project-modal').addEventListener('click',e=>{if(e.target===byId('project-modal'))closeModal()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&byId('project-modal').classList.contains('open'))closeModal();if(e.key==='Tab'&&byId('project-modal').classList.contains('open')){const el=[...byId('project-modal').querySelectorAll('button:not([disabled]),a[href]')].filter(control=>control.getClientRects().length);const first=el[0],last=el[el.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}});
+    const menu=byId('site-nav'),toggle=byId('menu-toggle');toggle.addEventListener('click',()=>{let next=!menu.classList.contains('open');menu.classList.toggle('open',next);toggle.setAttribute('aria-expanded',String(next));toggle.setAttribute('aria-label',next?'메뉴 닫기':'메뉴 열기');toggle.textContent=next?'×':'☰'});menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','메뉴 열기');toggle.textContent='☰'}));
+
+    // CC LAB local editing system. Project and text data embedded in exported HTML.
+    const TEXT_FIELDS=[
+      ['heroEyebrow','메인 상단 영문',' .hero .eyebrow',false],
+      ['heroTitle','메인 영문 제목','.hero h1',true],
+      ['heroSlogan','메인 한글 슬로건','.hero-ko',false],
+      ['heroDescription','메인 소개글','.hero-description',false],
+      ['workHeading','포트폴리오 제목','#work .section-title',false],
+      ['workIntro','포트폴리오 소개','#work .section-intro',false],
+      ['servicesHeading','서비스 제목','#services .section-title',false],
+      ['aboutHeading','스튜디오 소개 제목','#about h2',false],
+      ['aboutIntro','스튜디오 소개 첫 문장','#about p',true],
+      ['aboutDetail','스튜디오 소개 상세 문구','#about p:nth-of-type(2)',true],
+      ['contactHeading','문의 제목','#contact .section-title',true],
+      ['contactIntro','문의 안내 문구','#contact .contact-intro',true]
+    ];
+    const textDataEl=byId('cclab-text-data');
+    let textData={};try{textData=JSON.parse(textDataEl.textContent)||{}}catch(e){}
+    // Support new lines in hero headlines without granting arbitrary HTML injection.
+    function setSiteText(key,value){
+      const field=TEXT_FIELDS.find(f=>f[0]===key);if(!field)return;
+      const el=document.querySelector(field[2]);if(!el)return;
+      if(field[3]){el.innerHTML=value.split('\n').map(escapeHTML).join('<br>')}
+      else if(field[2].includes('.section-title')){el.textContent=value;const dot=document.createElement('span');dot.style.color='var(--coral)';dot.textContent='.';el.appendChild(dot)}
+      else el.textContent=value;
+    }
+    for(const [key,val] of Object.entries(textData))setSiteText(key,val);
+    const textEditor=byId('editor-text-fields');
+    for(const [key,label,selector,multiline] of TEXT_FIELDS){
+      const el=document.querySelector(selector);if(!el)continue;
+      const val=textData[key]??(multiline?el.innerText.replace(/\n{2,}/g,'\n'):el.textContent.trim().replace(/\.$/,''));
+      const container=document.createElement('label');container.textContent=label;
+      const input=document.createElement(multiline?'textarea':'input');input.id='text-'+key;input.value=val;input.dataset.textKey=key;
+      if(multiline)input.rows=3;
+      container.appendChild(input);textEditor.appendChild(container);
+    }
+    let editorIndex=0;
+    let editorPreviousFocus=null;
+    const editCover=byId('editor-cover');
+    const setStatus=msg=>{byId('editor-status').textContent=msg};
+    function refreshProjects(){indexes=PROJECTS.map((_,i)=>i);renderFilters();renderEditorList()}
+    function renderEditorList(){
+      byId('editor-projects').innerHTML=PROJECTS.map((p,i)=>`<button type="button" class="editor-project ${i===editorIndex?'active':''}" data-edit-index="${i}"><span>${escapeHTML(p.title)}</span><span>${i+1} ↗</span></button>`).join('')
+    }
+    function mediaLabel(url,i){if(url.startsWith('data:'))return `${i+1} · ${url.startsWith('data:video/')?'영상':'이미지'} 파일`;return `${i+1} · ${url.split('/').pop().slice(0,56)}`}
+    function displayEditorProject(i){
+      editorIndex=i;const p=PROJECTS[i];if(!p)return;
+      byId('edit-title').value=p.title;byId('edit-description').value=p.description||'';byId('edit-details').value=p.details||'';byId('edit-category').value=p.category;
+      byId('edit-url').value='';byId('edit-file').value='';byId('edit-new-type').value='';previewEditor();renderEditorList();setStatus('');
+    }
+    function renderTypeManager(){
+      const p=PROJECTS[editorIndex];if(!p)return;
+      const types=mediaTypes(p),selected=byId('edit-media-group').value;
+      byId('editor-type-manager').innerHTML=types.map((t,i)=>`<div class="editor-type-line"><input aria-label="${escapeHTML(t.name)} 유형명" data-type-name="${escapeHTML(t.id)}" maxlength="45" value="${escapeHTML(t.name)}"/><button type="button" class="editor-mini" data-type-rename="${escapeHTML(t.id)}">이름 저장</button><button type="button" class="editor-mini" data-type-remove="${escapeHTML(t.id)}" ${types.length===1?'disabled title="마지막 유형은 삭제할 수 없습니다"':''}>삭제</button></div>`).join('');
+      byId('edit-media-group').innerHTML=types.map(t=>`<option value="${escapeHTML(t.id)}">${escapeHTML(t.name)}</option>`).join('');
+      byId('edit-media-group').value=types.some(t=>t.id===selected)?selected:types[0].id;
+    }
+    function previewEditor(){
+      const p=PROJECTS[editorIndex];if(!p)return;
+      const groups=groupedMedia(p),types=mediaTypes(p),items=normalizedMedia(p);
+      renderTypeManager();
+      byId('editor-media-list').innerHTML=types.map(g=>`<div class="editor-media-section-title">${escapeHTML(g.name)} (${(groups[g.id]||[]).length})</div>${(groups[g.id]||[]).map((url,i)=>`<div class="editor-media-line"><span>${escapeHTML(mediaLabel(url,i))}</span><button type="button" class="editor-mini" data-media-group="${escapeHTML(g.id)}" data-media-up="${i}" ${i===0?'disabled':''}>↑</button><button type="button" class="editor-mini" data-media-group="${escapeHTML(g.id)}" data-media-remove="${i}">삭제</button></div>`).join('')||'<p class="editor-tip">등록된 콘텐츠가 없습니다.</p>'}`).join('');
+      byId('editor-preview-slot').innerHTML=types.map(g=>(groups[g.id]||[]).length?`<div class="editor-media-section-title">${escapeHTML(g.name)}</div>${groups[g.id].map(url=>oneMedia(url,p.title,true)).join('')}`:'').join('');
+      setStatus(`총 ${items.length}개의 미디어가 등록되어 있습니다.`);
+    }
+    byId('edit-type-add').addEventListener('click',()=>{
+      const name=byId('edit-new-type').value.trim(),p=PROJECTS[editorIndex];if(!p)return;
+      if(!name){setStatus('추가할 작업물 유형 이름을 입력해 주세요.');return}
+      const types=mediaTypes(p);if(types.some(t=>t.name===name)){setStatus('같은 이름의 작업물 유형이 이미 있습니다.');return}
+      const id='type_'+Date.now().toString(36)+'_'+Math.random().toString(36).slice(2,7),groups=groupedMedia(p);
+      types.push({id,name});groups[id]=[];saveTypes(p,types,groups);refreshProjects();previewEditor();byId('edit-media-group').value=id;byId('edit-new-type').value='';setStatus(`“${name}” 유형이 추가되었습니다. 영상을 등록한 후 HTML로 저장하세요.`);
+    });
+    byId('edit-new-type').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();byId('edit-type-add').click()}});
+    byId('editor-type-manager').addEventListener('click',e=>{
+      const rename=e.target.closest('[data-type-rename]'),remove=e.target.closest('[data-type-remove]');if(!rename&&!remove)return;
+      const p=PROJECTS[editorIndex],types=mediaTypes(p),groups=groupedMedia(p),id=(rename||remove).dataset.typeRename||(remove&&remove.dataset.typeRemove),type=types.find(t=>t.id===id);
+      if(!type)return;
+      if(rename){
+        const input=byId('editor-type-manager').querySelectorAll('[data-type-name]');const field=[...input].find(n=>n.dataset.typeName===id),name=field.value.trim();
+        if(!name){setStatus('유형 이름을 입력해 주세요.');return}
+        if(types.some(t=>t.id!==id&&t.name===name)){setStatus('같은 이름의 유형이 이미 있습니다.');return}
+        type.name=name;saveTypes(p,types,groups);previewEditor();setStatus(`유형명이 “${name}”(으)로 변경되었습니다. HTML 저장으로 보관하세요.`);
+      }else{
+        if(types.length===1){setStatus('유형은 최소 하나가 필요합니다. 이름을 “전체 작업물”로 바꿔 사용하세요.');return}
+        if(groups[id]&&groups[id].length&&!confirm(`“${type.name}” 유형에 들어 있는 ${groups[id].length}개 작업물도 함께 삭제됩니다. 삭제할까요?`))return;
+        delete groups[id];saveTypes(p,types.filter(t=>t.id!==id),groups);refreshProjects();previewEditor();setStatus(`“${type.name}” 유형을 삭제했습니다.`);
+      }
+    });
+    function openEditor(){editorPreviousFocus=document.activeElement;editCover.classList.add('active');document.body.style.overflow='hidden';displayEditorProject(Math.min(editorIndex,PROJECTS.length-1));byId('editor-close').focus()}
+    function closeEditor(){editCover.classList.remove('active');document.body.style.overflow='';editorPreviousFocus?.focus()}
+    byId('edit-trigger').addEventListener('click',openEditor);
+    byId('editor-close').addEventListener('click',closeEditor);
+    editCover.addEventListener('click',e=>{if(e.target===editCover)closeEditor()});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'&&editCover.classList.contains('active'))closeEditor()});
+    document.querySelectorAll('[data-editor-tab]').forEach(btn=>btn.addEventListener('click',()=>{
+      document.querySelectorAll('[data-editor-tab]').forEach(b=>b.classList.toggle('active',b===btn));
+      document.querySelectorAll('.editor-tab-content').forEach(c=>c.classList.toggle('active',c.id==='editor-tab-'+btn.dataset.editorTab));
+      setStatus('');
+    }));
+    byId('edit-category').innerHTML=CATEGORIES.map(c=>`<option value="${c.id}">${escapeHTML(c.name)}</option>`).join('');
+    byId('editor-projects').addEventListener('click',e=>{const b=e.target.closest('[data-edit-index]');if(b)displayEditorProject(Number(b.dataset.editIndex))});
+    byId('editor-add').addEventListener('click',()=>{PROJECTS.push({title:'새 프로젝트',description:'프로젝트 소개',details:'',category:'commercial',mediaTypes:[{...DEFAULT_TYPE}],mediaGroups:{general:[]}});refreshProjects();displayEditorProject(PROJECTS.length-1);setStatus('새 프로젝트를 추가했습니다. 정보를 입력하고 변경 적용을 눌러주세요.')});
+    const fileToDataUrl=file=>new Promise((resolve,reject)=>{const rd=new FileReader();rd.onload=()=>resolve(rd.result);rd.onerror=()=>reject(new Error('파일을 읽을 수 없습니다.'));rd.readAsDataURL(file)});
+    byId('editor-save').addEventListener('click',async()=>{
+      const p=PROJECTS[editorIndex];if(!p)return;
+      const title=byId('edit-title').value.trim(),description=byId('edit-description').value.trim(),details=byId('edit-details').value.trim();
+      if(!title){setStatus('프로젝트명을 입력해 주세요.');return}
+      const files=[...byId('edit-file').files],url=byId('edit-url').value.trim();
+      if(files.some(f=>!/^(image\/(jpeg|png|webp|gif)|video\/(mp4|webm))$/.test(f.type))){setStatus('지원하지 않는 파일 형식입니다.');return}
+      if(url && !/^https?:\/\/\S+\.(?:jpg|jpeg|png|webp|gif|mp4|webm)(?:\?\S*)?$/i.test(url)){setStatus('직접 미디어 파일 URL을 입력해 주세요.');return}
+      p.title=title;p.description=description;p.details=details;p.category=byId('edit-category').value;
+      const groups=groupedMedia(p),group=byId('edit-media-group').value;
+      if(!Object.hasOwn(groups,group)){setStatus('작업물 유형을 선택해 주세요.');return}
+      if(files.length){setStatus(`${files.length}개 파일을 불러오는 중…`);try{for(const file of files)groups[group].push(await fileToDataUrl(file))}catch(e){setStatus(e.message);return}}
+      if(url)groups[group].push(url);
+      saveGroups(p,groups);
+      refreshProjects();displayEditorProject(editorIndex);setStatus('변경 사항을 적용했습니다. 작업을 마치면 HTML 저장하기를 눌러주세요.');
+    });
+    byId('editor-media-list').addEventListener('click',e=>{
+      const remove=e.target.closest('[data-media-remove]');const up=e.target.closest('[data-media-up]');if(!remove&&!up)return;
+      const p=PROJECTS[editorIndex],groups=groupedMedia(p),group=(remove||up).dataset.mediaGroup;
+      if(!Object.hasOwn(groups,group))return;
+      const media=groups[group];
+      if(remove)media.splice(Number(remove.dataset.mediaRemove),1);
+      if(up){const i=Number(up.dataset.mediaUp);if(i>0)[media[i],media[i-1]]=[media[i-1],media[i]]}
+      saveGroups(p,groups);refreshProjects();previewEditor();
+    });
+    byId('editor-delete').addEventListener('click',()=>{if(!PROJECTS[editorIndex]||!confirm('이 프로젝트를 삭제할까요?'))return;PROJECTS.splice(editorIndex,1);editorIndex=Math.max(0,Math.min(editorIndex,PROJECTS.length-1));refreshProjects();if(PROJECTS.length)displayEditorProject(editorIndex);else{byId('editor-preview-slot').innerHTML='';byId('editor-media-list').innerHTML=''}setStatus('프로젝트를 삭제했습니다.')});
+    byId('editor-text-apply').addEventListener('click',()=>{
+      textEditor.querySelectorAll('[data-text-key]').forEach(el=>{textData[el.dataset.textKey]=el.value;setSiteText(el.dataset.textKey,el.value)});
+      setStatus('사이트 문구 변경을 적용했습니다. 아래에서 HTML 파일을 저장하세요.');
+    });
+    function downloadHTML(viewOnly){
+      if(!viewOnly && document.querySelector('[data-editor-tab="texts"]').classList.contains('active'))byId('editor-text-apply').click();
+      const copy=document.documentElement.cloneNode(true);
+      const projectJSON=JSON.stringify(PROJECTS).replace(/</g,'\\u003c');
+      const textJSON=JSON.stringify(textData).replace(/</g,'\\u003c');
+      copy.querySelector('#cclab-project-data').textContent=projectJSON;
+      copy.querySelector('#cclab-text-data').textContent=textJSON;
+      copy.querySelector('#editor-cover')?.classList.remove('active');
+      copy.querySelector('body')?.removeAttribute('style');
+      if(viewOnly){copy.querySelector('#edit-trigger')?.setAttribute('hidden','');copy.querySelector('#editor-cover')?.setAttribute('hidden','');const disabledStyle=copy.ownerDocument.createElement('style');disabledStyle.textContent='#edit-trigger,#editor-cover{display:none!important}';copy.querySelector('head').appendChild(disabledStyle);}
+      const html='<!doctype html>\n'+copy.outerHTML;
+      const blob=new Blob([html],{type:'text/html;charset=utf-8'});
+      const link=document.createElement('a');link.href=URL.createObjectURL(blob);
+      link.download=viewOnly?'CC_LAB_Visitor_View.html':'CC_LAB_Editable_Saved.html';
+      document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(link.href),120000);
+      setStatus(viewOnly?'보기 전용 HTML이 저장되었습니다. 이 파일은 다시 편집할 수 없으니 편집본도 보관하세요.':'편집 가능한 HTML을 저장했습니다. 다음 작업 때 이 파일을 열어 이어서 편집하세요.');
+    }
+    byId('editor-export').addEventListener('click',()=>downloadHTML(false));
+    byId('editor-publish-export').addEventListener('click',()=>downloadHTML(true));
+    renderEditorList();
+  </script>
+</body>
+</html>
